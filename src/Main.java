@@ -20,7 +20,7 @@ public class Main {
         double precioFinal = productoConDescuento.aplicarDescuento(10);
 
         System.out.println("Descuento aplicado al café: 10%");
-        System.out.println("Precio final del café: " + precioFinal + " €");
+        System.out.printf("Precio final del café: %.2f €%n", precioFinal);
     }
 
 

@@ -17,12 +17,10 @@ public class Comida extends Producto {
 
     @Override
     public void mostrarInformacion() {
-        super.mostrarInformacion();
-
         if (esCaliente) {
-            System.out.println("Comida caliente: Sí");
+            System.out.printf("%s caliente - %.2f €%n", getNombre(), getPrecio());
         } else {
-            System.out.println("Comida caliente: No");
+            System.out.printf("%s frío - %.2f €%n", getNombre(), getPrecio());
         }
     }
 }

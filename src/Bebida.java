@@ -17,8 +17,7 @@ public class Bebida extends Producto {
     }
     @Override
     public void mostrarInformacion() {
-        super.mostrarInformacion();
-        System.out.println("Tamaño: " + tamanio);
+        System.out.printf("%s %s - %.2f €%n", getNombre(), tamanio, getPrecio());
     }
 
 }

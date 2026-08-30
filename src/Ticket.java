@@ -34,13 +34,13 @@ public class Ticket {
     public void mostrarTicket() {
         System.out.println("CAFETERÍA JAVA");
         System.out.println("Cliente: " + cliente.getNombre());
-        System.out.println("Camarero: " + camarero.getNombre());
+        System.out.println("Camarero: " + camarero.getNombre() + " - Código: " + camarero.getCodigoEmpleado());
         System.out.println("Productos:");
 
         for (int i = 0; i < contadorProductos; i++) {
-            System.out.println(productos[i].getNombre() + " - " + productos[i].getPrecio() + " €");
+            productos[i].mostrarInformacion();
         }
 
-        System.out.println("Total: " + calcularTotal() + " €");
+        System.out.printf("Total: %.2f €%n", calcularTotal());
     }
 }
