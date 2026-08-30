@@ -1,4 +1,4 @@
-public class Producto {
+public class Producto implements Descontable {
     private String nombre;
     private double precio;
     private String categoria;
@@ -38,5 +38,11 @@ public class Producto {
         System.out.println("Nombre: " + nombre);
         System.out.println("Precio: " + precio + " €");
         System.out.println("Categoría: " + categoria);
+    }
+
+    @Override
+    public double aplicarDescuento(double porcentaje) {
+        return precio - (precio * porcentaje / 100);
+
     }
 }
