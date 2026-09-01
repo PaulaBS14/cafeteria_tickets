@@ -1,3 +1,8 @@
+/**
+ * Representa un ticket de compra de la cafetería.
+ * @author Paula
+ * @version 1.0
+ */
 public class Ticket {
 
     private Cliente cliente;
@@ -5,6 +10,11 @@ public class Ticket {
     private Producto[] productos;
     private int contadorProductos;
 
+    /**
+     * Crea un ticket asociado a un cliente y a un camarero.
+     * @param cliente cliente asociado al ticket
+     * @param camarero camarero asociado al ticket
+     */
     public Ticket(Cliente cliente, Camarero camarero) {
         this.cliente = cliente;
         this.camarero = camarero;
@@ -12,6 +22,10 @@ public class Ticket {
         this.contadorProductos = 0;
     }
 
+    /**
+     * Añade un producto al ticket.
+     * @param producto producto que se va a añadir al ticket
+     */
     public void agregarProducto(Producto producto) {
         if (contadorProductos < productos.length) {
             productos[contadorProductos] = producto;
@@ -21,6 +35,10 @@ public class Ticket {
         }
     }
 
+    /**
+     * Calcula el precio total de los productos del ticket.
+     * @return precio total del ticket
+     */
     public double calcularTotal() {
         double total = 0;
 
@@ -31,6 +49,9 @@ public class Ticket {
         return total;
     }
 
+    /**
+     * Muestra por pantalla la información completa del ticket.
+     */
     public void mostrarTicket() {
         System.out.println("CAFETERÍA JAVA");
         System.out.println("Cliente: " + cliente.getNombre());

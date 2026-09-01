@@ -1,5 +1,14 @@
+/**
+ * Clase principal para ejecutar el programa de la cafetería.
+ * @author Paula
+ * @version 1.0
+ */
 public class Main {
 
+    /**
+     * Ejecuta el programa principal de la cafetería.
+     * @param args argumentos de la línea de comandos
+     */
     public static void main(String[] args) {
 
         Cliente cliente = new Cliente("Laura Martín", "600123456");
